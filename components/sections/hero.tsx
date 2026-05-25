@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
-import { Mail, Phone, Download } from "lucide-react";
+import { Mail, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GithubIcon, LinkedinIcon } from "@/components/icons";
 import { profile } from "@/content/profile";
@@ -55,13 +55,6 @@ export function Hero() {
             className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border text-muted-foreground transition-colors hover:text-primary hover:border-primary/40"
           >
             <Mail className="size-4" />
-          </Link>
-          <Link
-            href={`tel:${profile.phone}`}
-            aria-label="Phone"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border text-muted-foreground transition-colors hover:text-primary hover:border-primary/40"
-          >
-            <Phone className="size-4" />
           </Link>
           <Button asChild variant="outline" size="lg" className="ml-1">
             <a href={profile.cvPath} download>

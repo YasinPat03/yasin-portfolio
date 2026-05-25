@@ -5,7 +5,7 @@ import { projects } from "@/content/projects";
 
 export function OtherProjects() {
   return (
-    <Section id="other-projects" eyebrow="02b" title="Other projects" className="pt-0 md:pt-0">
+    <Section id="other-projects" eyebrow="03" title="Other projects">
       <div className="flex flex-col">
         {projects.map((project, idx) => (
           <div key={project.title}>

@@ -46,7 +46,6 @@ const personJsonLd = {
   name: profile.name,
   jobTitle: "Computer Science Student",
   email: `mailto:${profile.email}`,
-  telephone: profile.phone,
   url: siteUrl,
   alumniOf: [
     { "@type": "CollegeOrUniversity", name: "Université de Montréal" },
