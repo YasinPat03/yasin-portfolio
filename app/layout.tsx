@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { profile } from "@/content/profile";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,7 +47,6 @@ const personJsonLd = {
   name: profile.name,
   jobTitle: "Computer Science Student",
   email: `mailto:${profile.email}`,
-  telephone: profile.phone,
   url: siteUrl,
   alumniOf: [
     { "@type": "CollegeOrUniversity", name: "Université de Montréal" },
@@ -68,6 +68,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen bg-background text-foreground antialiased font-sans">
         {children}
+        <Analytics />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}

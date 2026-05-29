@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 import { Section } from "@/components/section";
 import { GithubIcon, LinkedinIcon } from "@/components/icons";
 import { profile } from "@/content/profile";
@@ -19,13 +19,6 @@ export function Contact() {
         >
           <Mail className="size-4 text-muted-foreground" />
           <span className="font-mono">{profile.email}</span>
-        </Link>
-        <Link
-          href={`tel:${profile.phone}`}
-          className="inline-flex items-center gap-3 text-foreground transition-colors hover:text-primary"
-        >
-          <Phone className="size-4 text-muted-foreground" />
-          <span className="font-mono">{profile.phone}</span>
         </Link>
         <Link
           href={profile.github}
